@@ -1,0 +1,60 @@
+  body {
+    margin: 0;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(120deg, #ffe4ec, #ffd6e0, #ffb3cc);
+    overflow: hidden;
+  }
+  .jar-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .jar, .controls {
+    background: rgba(255,255,255,0.7);
+    backdrop-filter: blur(6px);
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    border: 1px solid #ff9fbf;
+  }
+  .jar svg {
+    width: 200px;
+    height: 250px;
+  }
+  button {
+    margin-right: 10px;
+    padding: 8px 14px;
+    border-radius: 20px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+  }
+  button:active {
+    transform: scale(0.96);
+  }
+  .start { background: #f43f5e; color: #fff; }
+  .pause { background: #ffe4ec; color: #c026d3; }
+  .reset { background: #fff; color: #c026d3; border: 1px solid #ff9fbf; }
+  input[type=range] {
+    width: 100%;
+  }
+  .overflow-heart {
+    position: absolute;
+    font-size: 20px;
+    animation-name: floatUp;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+  @keyframes floatUp {
+    0% { transform: translateY(0) scale(0.8) rotate(0deg); opacity: 0; }
+    8% { opacity: 1; }
+    50% { transform: translateY(-50vh) scale(1) rotate(8deg); }
+    100% { transform: translateY(-105vh) scale(1.2) rotate(-8deg); opacity: 0; }
+  }

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hearts in Jar</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1 style="color:#f43f5e;">For my jaan 💖</h1>
+<p style="color:#c026d3;">Click Start 💖</p>
+
+<div class="jar-container">
+  <div class="jar" id="jar">
+    <svg viewBox="0 0 100 120">
+      <defs>
+        <!-- Gradient for liquid -->
+        <linearGradient id="liquid" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#ff9fbf" />
+          <stop offset="100%" stop-color="#ffb3cc" />
+        </linearGradient>
+
+        <clipPath id="jar-clip">
+          <path d="M30 8 h40 a6 6 0 0 1 6 6 v4 a6 6 0 0 1 -6 6 v2 a6 6 0 0 1 6 6 v56 a18 18 0 0 1 -18 18 H48 a18 18 0 0 1 -18 -18 V32 a6 6 0 0 1 6 -6 v-2 a6 6 0 0 1 -6 -6 v-4 a6 6 0 0 1 6 -6 z"/>
+        </clipPath>
+      </defs>
+
+      <g clip-path="url(#jar-clip)">
+        <rect x="24" y="90" width="52" height="0" fill="url(#liquid)" id="liquid"></rect>
+        <g id="hearts-in-jar"></g>
+      </g>
+
+      <path d="M30 8 h40 a6 6 0 0 1 6 6 v4 a6 6 0 0 1 -6 6 v2 a6 6 0 0 1 6 6 v56 a18 18 0 0 1 -18 18 H48 a18 18 0 0 1 -18 -18 V32 a6 6 0 0 1 6 -6 v-2 a6 6 0 0 1 -6 -6 v-4 a6 6 0 0 1 6 -6 z" fill="none" stroke="#fb7185" stroke-width="2.2"/>
+    </svg>
+  </div>
+
+  <div class="controls">
+    <div>
+      <button class="start" id="startBtn">Start</button>
+      <button class="pause" id="pauseBtn">Pause</button>
+      <button class="reset" id="resetBtn">Reset</button>
+    </div>
+    <div>
+      <label>Speed: <span id="speedVal">1x</span></label>
+      <input type="range" min="0.5" max="3" step="0.1" value="1" id="speedRange">
+    </div>
+    <div>
+      <p>Progress: <span id="progress">0%</span></p>
+      <p id="overflowText">Jar will overflow at 100% — get ready! 🎉</p>
+    </div>
+  </div>
+</div>
+
+<div id="overflowLayer"></div>
+<script src="script.js" ></script>
+
+</body>
+</html>
